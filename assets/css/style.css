@@ -1,0 +1,8 @@
+
+
+.custom-slide-img {
+    width: 800px; /* Atur lebar gambar sesuai keinginan */
+    height: 400px; /* Atur tinggi gambar sesuai keinginan */
+    object-fit: cover; /* Mengatur gambar untuk menutupi area yang tersedia */
+  }
+  
