@@ -20,6 +20,7 @@
                                 <option value="1">Paket 1</option>
                                 <option value="2">Paket 2</option>
                                 <option value="3">Paket 3</option>
+                                <option value="4">Paket 4</option>
                             </select>
                         </div>
                     </div>
@@ -118,151 +119,16 @@
             </div>
 
 
-            <div class="col-12 col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-tittle">Video 1</h5>
-                        <div class="text-center ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/xeFaACENF0s?si=xYRDDa_NDOnLu3Y9"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <?php 
+            include "layouts/sidebar.php";
+        ?>
+
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="container mt-3">
-        <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-
-            <!-- Section: Social media -->
-            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <!-- Left -->
-                <div class="me-5 d-none d-lg-block">
-                    <span>Hubungi Sosial Media:</span>
-                </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <!-- Content -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>Kementrian Pariwisata
-                            </h6>
-                            <p>
-                                Kementrian Pariwisata dan Ekonomi Kreatif memiliki visi menjadikan Indonesia sebagai
-                                negara
-                                tujuan
-                                pariwisata kelas dunia. Untuk itu, Kemenparekraf memiliki misi mengembangkan destinasi
-                                pariwisata kelas
-                                dunia dan melakukan pemasaran berorientasi kepada wisatawan
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Menu
-                            </h6>
-                            <p>
-                                <a href="#!" class="text-reset">Tentang Kami</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Daftar Paket</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Beranda</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Laravel</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Wisata
-                            </h6>
-                            <p>
-                                <a href="#!" class="text-reset">Alam</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Budaya</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Olahrahga</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Kuliner</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i class="fa-solid fa-house"></i> PERUM CONCROONG INDAH, Rogojampi, Banyuwangi</p>
-                            <p>
-                                <i class="fas fa-envelope me-3"></i>
-                                jokeroktaviano05@gmail.com
-                            </p>
-                            <p><i class="fas fa-phone me-3"></i> +628 852 260 176</p>
-                        </div>
-                        <!-- Grid column -->
-                    </div>
-                    <!-- Grid row -->
-                </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2021 Hak Cipta :
-                <a class="text-reset fw-bold" href="https://kemenparekraf.go.id/">Kementrian Pariwisata</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-    </div>
-    <!-- Footer -->
-
+        <?php 
+            include "layouts/footer.php";
+        ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
