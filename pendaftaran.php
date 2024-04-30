@@ -16,7 +16,7 @@
                         <div class="mb-3 col-12 col-md-6">
                             <label for="paket-wisata" class="form-label">Paket Wisata</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected></option>
+                                <option selected disabled>Pilih Paket</option>
                                 <option value="1">Paket 1</option>
                                 <option value="2">Paket 2</option>
                                 <option value="3">Paket 3</option>
@@ -45,7 +45,7 @@
                         <div class="mb-3 col-12 col-lg-3">
                             <label for="jumlah-peserta" class="form-label">Jumlah Peserta</label>
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control form-control-sm" id="jumlah-peserta"
+                                <input type="number" class="form-control form-control-sm" id="jumlah-peserta"
                                     name="jumlah-peserta" placeholder="" aria-describedby="basic-addon2" required>
                                 <hari class="input-group-text" id="basic-addon2">orang</span>
                             </div>
