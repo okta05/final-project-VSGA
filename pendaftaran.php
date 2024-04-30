@@ -36,7 +36,7 @@
                         <label for="durasi" class="form-label">Durasi</label>
                         <div class="input-group input-group-sm">
                             <input type="number" class="form-control form-control-sm" id="durasi" name="durasi"
-                                placeholder="" aria-describeby="basic-addon2" required>
+                            onchange="updateJumlahDurasi()" placeholder="" aria-describeby="basic-addon2" required>
                             <span class="input-group-text" id="basic-addon2">hari</span>
                         </div>
                     </div>
@@ -202,22 +202,26 @@ function updateJumlahPeserta() {
     peserta = document.getElementById("jumlah-peserta").value;
     hargaPaket = Number(document.getElementById("paket-wisata").value);
     elementJumlahPaket = document.getElementById("harga-paket");
-    elementJumlahLayanan = document.getElementById("harga-layanan");
-
-    hargaPaketWisata = 0;
-
-    if (hargaPaket == 1) {
-        hargaPaketWisata = 500000;
-    } else if (hargaPaket == 2) {
-        hargaPaketWisata = 750000;
-    } else if (hargaPaket == 3) {
-        hargaPaketWisata = 10000000;
-    } else if (hargaPaket == 4) {
-        hargaPaketWisata = 12500000;
-    }
+    elementJumlahLayanan = document.getElementById("harga-layanan")
     
-    updatePaket = (peserta * hargaPaketWisata);
-    updateLayanan = (peserta * totalLayanan)
+    updatePaket = 0;
+
+    updatePaket = (peserta * paketwisata);
+    updateLayanan = (durasi * totalLayanan * peserta)
+
+    elementJumlahPaket.value = updatePaket;
+    elementJumlahLayanan.value = updateLayanan;
+}
+
+function updateJumlahDurasi() {
+    durasi = document.getElementById("durasi").value;
+    hargaPaket = Number(document.getElementById("paket-wisata").value);
+    elementJumlahPaket = document.getElementById("harga-paket");
+    elementJumlahLayanan = document.getElementById("harga-layanan")
+    
+    updatelayanan = 0;
+    // updatePaket = (peserta * paketwisata);
+    updateLayanan = (durasi * totalLayanan * peserta)
 
     elementJumlahPaket.value = updatePaket;
     elementJumlahLayanan.value = updateLayanan;
