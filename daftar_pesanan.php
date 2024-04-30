@@ -16,7 +16,6 @@
                 <th>Harga Paket</th>
                 <th>Harga Layanan</th>
                 <th>Jumlah Tagihan</th>
-                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -32,9 +31,6 @@
                 <td>1.000.000</td>
                 <td>2.700.000</td>
                 <td>3.700.000</td>
-                <td>
-                    <input type="submit" class="btn btn-sm btn-warning" value="Ubah">
-                </td>
             </tr>
         </tbody>
     </table>

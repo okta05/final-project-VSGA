@@ -36,10 +36,10 @@
               <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pendaftaran.php">Daftar Wisata</a>
+              <a class="nav-link" href="pendaftaran.php">Daftar Paket</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="daftar_pesanan.php">Ubah Pesanan</a>
+              <a class="nav-link" href="daftar_pesanan.php">Daftar Pesanan</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Tentang Kami</a>

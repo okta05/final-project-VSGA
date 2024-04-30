@@ -1,6 +1,7 @@
 <?php
   include "layouts/header.php";
 ?>
+
 <h1>
     <center> Daftar Paket </center>
 </h1>
@@ -22,7 +23,7 @@
                                 magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis
                                 suscipit laboriosam,
                                 nisi ut aliquid ex ea commodi consequatur.</p>
-                            <a href="pendaftaran.html" class="btn btn-danger">daftar wisata</a>
+                            <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
                                 magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis
                                 suscipit laboriosam,
                                 nisi ut aliquid ex ea commodi consequatur.</p>
-                            <a href="pendaftaran.html" class="btn btn-danger">daftar wisata</a>
+                            <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,24 @@
                                 magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis
                                 suscipit laboriosam,
                                 nisi ut aliquid ex ea commodi consequatur.</p>
-                            <a href="pendaftaran.html" class="btn btn-danger">daftar wisata</a>
+                            <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/image/telunjuk-raung.jpg" class="card-img-top same-size-image">
+                        <div class="card-body">
+                            <h5 class="card-tittle">Telunjuk Raung</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod
+                                tempor incidunt
+                                ut
+                                labore et dolore
+                                magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis
+                                suscipit laboriosam,
+                                nisi ut aliquid ex ea commodi consequatur.</p>
+                            <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
                         </div>
                     </div>
                 </div>
@@ -64,9 +82,10 @@
             </div>
         </div>
 
-<?php 
+        <?php 
   include "layouts/sidebar.php";
 ?>
+
     </div>
 </div>
 

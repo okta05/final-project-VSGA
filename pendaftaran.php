@@ -35,7 +35,7 @@
                     <div class="mb-3 col-12 col-md-6">
                         <label for="durasi" class="form-label">Durasi</label>
                         <div class="input-group input-group-sm">
-                            <input type="text" class="form-control form-control-sm" id="durasi" name="durasi"
+                            <input type="number" class="form-control form-control-sm" id="durasi" name="durasi"
                                 placeholder="" aria-describeby="basic-addon2" required>
                             <span class="input-group-text" id="basic-addon2">hari</span>
                         </div>
@@ -47,7 +47,8 @@
                         <label for="jumlah-peserta" class="form-label">Jumlah Peserta</label>
                         <div class="input-group input-group-sm">
                             <input type="number" class="form-control form-control-sm" id="jumlah-peserta"
-                                name="jumlah-peserta" placeholder="" aria-describedby="basic-addon2" required>
+                                name="jumlah-peserta" onchange="updateJumlahPeserta()" placeholder=""
+                                aria-describedby="basic-addon2" required>
                             <hari class="input-group-text" id="basic-addon2">orang</span>
                         </div>
                     </div>
@@ -127,6 +128,7 @@
     </div>
 </div>
 
+
 <?php 
             include "layouts/footer.php";
         ?>
@@ -164,25 +166,28 @@ function handlePenginapanan(cb) {
     penginapan = cb.checked;
     hl = document.getElementById("harga-layanan");
     hl.value = hitungLayanan();
+    // ul.value = updateJumlahPaket();
 }
 
 function handleTransportasi(cb) {
     transportasi = cb.checked;
     hl = document.getElementById("harga-layanan");
     hl.value = hitungLayanan();
+    // ul.value = updateJumlahPaket();
 }
 
 function handleMakanan(cb) {
     makanan = cb.checked;
     hl = document.getElementById("harga-layanan");
     hl.value = hitungLayanan();
+    // ul.value = updateJumlahPaket();
 }
 
 function hitungLayanan() {
     totalLayanan = 0;
 
     if (penginapan) {
-        totalLayanan = totalLayanan + 300000;
+        totalLayanan = totalLayanan + 300000 ;
     }
     if (transportasi) {
         totalLayanan = totalLayanan + 200000;
@@ -191,6 +196,42 @@ function hitungLayanan() {
         totalLayanan = totalLayanan + 150000;
     }
     return totalLayanan;
+}
+
+function updateJumlahPeserta() {
+    peserta = document.getElementById("jumlah-peserta").value;
+    hargaPaket = Number(document.getElementById("paket-wisata").value);
+    elementJumlahPaket = document.getElementById("harga-paket");
+    elementJumlahLayanan = document.getElementById("harga-layanan");
+
+    hargaPaketWisata = 0;
+
+    if (hargaPaket == 1) {
+        hargaPaketWisata = 500000;
+    } else if (hargaPaket == 2) {
+        hargaPaketWisata = 750000;
+    } else if (hargaPaket == 3) {
+        hargaPaketWisata = 10000000;
+    } else if (hargaPaket == 4) {
+        hargaPaketWisata = 12500000;
+    }
+    
+    updatePaket = (peserta * hargaPaketWisata);
+    updateLayanan = (peserta * totalLayanan)
+
+    elementJumlahPaket.value = updatePaket;
+    elementJumlahLayanan.value = updateLayanan;
+}
+
+function hitung() {
+    elementJumlahTagihan = document.getElementById("jumlah-tagihan");
+
+    totalTagihan = 0;
+    // Hitung total tagihan baru
+    totalTagihan = (updateLayanan + updatePaket);
+
+
+    elementJumlahTagihan.value = totalTagihan;
 }
 </script>
 
