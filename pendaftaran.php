@@ -15,7 +15,7 @@
                     </div>
                     <div class="mb-3 col-12 col-md-6">
                         <label for="paket-wisata" class="form-label">Paket Wisata</label>
-                        <select class="form-select" id="nama-paket" name="nama-paket"
+                        <select class="form-select" id="paket-wisata" name="paket-wisata"
                             aria-label="Default select example" onchange="updateHargaPaket()">
                             <option selected disabled>Pilih Paket</option>
                             <option value="1">Paket 1</option>
@@ -59,24 +59,24 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Y" id="penginapan"
-                                        name="penginapan" onclick="handlePenginapanan(this)">
+                                        name="penginapan" onhcange="updateHargaLayanan">
                                     <label class="form-check-label" for="penginapan"> Penginapan (Rp.
-                                        1.000.000)</label>
+                                        300.000)</label>
                                     </input>
                                 </div>
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Y" id="transportasi"
-                                        name="transportasi" onclick="handleTransportasi(this)">
+                                        name="transportasi" onhcange="updateHargaLayanan">
                                     <label class="form-check-label" for="transportasi"> Transportasi (Rp.
-                                        1.200.000)</label>
+                                        200.000)</label>
                                     </input>
                                 </div>
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Y" id="makanan"
-                                        name="makanan" onclick="handleMakanan(this)">
-                                    <label class="form-check-label" for="makanan"> Makanan (Rp. 500.000)</label>
+                                        name="makanan" onhcange="updateHargaLayanan">
+                                    <label class="form-check-label" for="makanan"> Makanan (Rp. 150.000)</label>
                                     </input>
                                 </div>
 
@@ -137,20 +137,23 @@
 
 <script>
 function updateHargaPaket() {
-    nilai = Number(document.getElementById("nama-paket").value);
-    hargapaket = 0;
+    nilai = Number(document.getElementById("paket-wisata").value);
+    elementHargaPaket = document.getElementById("harga-paket");
+    paketwisata = 0;
 
     if (nilai == 1) {
-        hargapaket = 500000;
+        paketwisata = 500000;
     } else if (nilai == 2) {
-        hargapaket = 750000;
+        paketwisata = 750000;
     } else if (nilai == 3) {
-        hargapaket = 10000000;
+        paketwisata = 10000000;
     } else if (nilai == 4) {
-        hargapaket = 12500000;
+        paketwisata = 12500000;
     }
     // console.log(nilai); cek pakek console
-    alert(hargapaket);
+    // alert(paketwisata);
+    elementHargaPaket.value=paketwisata;
+    // document.getElementById("harga-paket").value=paketwisata;s
 }
 </script>
 
