@@ -1,43 +1,68 @@
 <?php
     include "layouts/header.php";
-?>
-<div class="container mt-3">
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Nama Pemmesan</th>
-                <th>Paket</th>
-                <th>Tanggal Pemesanan</th>
-                <th>Durasi</th>
-                <th>Jumlah Peserta</th>
-                <th>Penginapan</th>
-                <th>Transportasi</th>
-                <th>Makanan</th>
-                <th>Harga Paket</th>
-                <th>Harga Layanan</th>
-                <th>Jumlah Tagihan</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Oktaviano</td>
-                <td>1</td>
-                <td>30-04-2004</td>
-                <td>3 Hari</td>
-                <td>1</td>
-                <td>1.000.000</td>
-                <td>1.200.000</td>
-                <td>500.000</td>
-                <td>1.000.000</td>
-                <td>2.700.000</td>
-                <td>3.700.000</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    // Menghubungkan ke database
+    $servername = "localhost"; // Ganti dengan nama server Anda
+    $username = "root"; // Ganti dengan username database Anda
+    $password = ""; // Ganti dengan password database Anda
+    $dbname = "db_wisata"; // Ganti dengan nama database Anda
 
-<?php
-    include "layouts/footer.php"
+    // Membuat koneksi
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Memeriksa koneksi
+    if ($conn->connect_error) {
+        die("Koneksi gagal: " . $conn->connect_error);
+    }
+
+    // Mendapatkan data dari database
+    $sql = "SELECT * FROM pesanan_wisata";
+    $result = $conn->query($sql);
+
+    // Menampilkan data dalam tabel
+    echo '<div class="container mt-3">';
+    echo '<table class="table table-bordered">';
+    echo '<thead>';
+    echo '<tr>';
+    echo '<th>Nama Pemesan</th>';
+    echo '<th>Paket</th>';
+    echo '<th>Tanggal Pemesanan</th>';
+    echo '<th>Durasi</th>';
+    echo '<th>Jumlah Peserta</th>';
+    echo '<th>Penginapan</th>';
+    echo '<th>Transportasi</th>';
+    echo '<th>Makanan</th>';
+    echo '<th>Harga Paket</th>';
+    echo '<th>Harga Layanan</th>';
+    echo '<th>Jumlah Tagihan</th>';
+    echo '</tr>';
+    echo '</thead>';
+    echo '<tbody>';
+    if ($result->num_rows > 0) {
+        // Output data dari setiap baris
+        while($row = $result->fetch_assoc()) {
+            echo '<tr>';
+            echo '<td>' . $row["nama_pemesan"] . '</td>';
+            echo '<td>' . $row["paket_wisata"] . '</td>';
+            echo '<td>' . $row["tgl_pesan"] . '</td>';
+            echo '<td>' . $row["durasi"] . ' Hari</td>';
+            echo '<td>' . $row["jumlah_peserta"] . ' Orang</td>';
+            echo '<td>' . ($row["penginapan"] == 'Y' ? 'Ya' : 'Tidak') . '</td>';
+            echo '<td>' . ($row["transportasi"] == 'Y' ? 'Ya' : 'Tidak') . '</td>';
+            echo '<td>' . ($row["makanan"] == 'Y' ? 'Ya' : 'Tidak') . '</td>';
+            echo '<td>Rp ' . number_format($row["harga_paket"], 2) . '</td>';
+            echo '<td>Rp ' . number_format($row["harga_layanan"], 2) . '</td>';
+            echo '<td>Rp ' . number_format($row["jumlah_tagihan"], 2) . '</td>';
+            echo '</tr>';
+        }
+    } else {
+        echo '<tr><td colspan="11">Tidak ada data</td></tr>';
+    }
+    echo '</tbody>';
+    echo '</table>';
+    echo '</div>';
+
+    $conn->close();
+    include "layouts/footer.php";
 ?>
 
 
