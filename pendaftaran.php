@@ -136,6 +136,10 @@
 </script>
 
 <script>
+penginapan = false;
+transportasi = false;
+makanan = false;
+
 function updateHargaPaket() {
     nilai = Number(document.getElementById("paket-wisata").value);
     elementHargaPaket = document.getElementById("harga-paket");
@@ -152,8 +156,41 @@ function updateHargaPaket() {
     }
     // console.log(nilai); cek pakek console
     // alert(paketwisata);
-    elementHargaPaket.value=paketwisata;
+    elementHargaPaket.value = paketwisata;
     // document.getElementById("harga-paket").value=paketwisata;s
+}
+
+function handlePenginapanan(cb) {
+    penginapan = cb.checked;
+    hl = document.getElementById("harga-layanan");
+    hl.value = hitungLayanan();
+}
+
+function handleTransportasi(cb) {
+    transportasi = cb.checked;
+    hl = document.getElementById("harga-layanan");
+    hl.value = hitungLayanan();
+}
+
+function handleMakanan(cb) {
+    makanan = cb.checked;
+    hl = document.getElementById("harga-layanan");
+    hl.value = hitungLayanan();
+}
+
+function hitungLayanan() {
+    totalLayanan = 0;
+
+    if (penginapan) {
+        totalLayanan = totalLayanan + 300000;
+    }
+    if (transportasi) {
+        totalLayanan = totalLayanan + 200000;
+    }
+    if (makanan) {
+        totalLayanan = totalLayanan + 150000;
+    }
+    return totalLayanan;
 }
 </script>
 
