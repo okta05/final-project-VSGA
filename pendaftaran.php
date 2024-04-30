@@ -1,0 +1,274 @@
+<?php 
+    include "layouts/header.php";
+?>
+
+    <div class="container mt-3">
+        <div class="row mt-3">
+            <div class="col-12 col-md-9">
+                <h2>Form Pemesanan Paket Wisata</h2>
+                <form action="" method="post" autocomplate="off">
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="nama-pemesan" class="form-label">Nama Pemesan</label>
+                            <input type="text" class="form-control form-control-sm" id="nama-pemesan"
+                                name="nama-pemesan" placeholder="" required>
+                        </div>
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="paket-wisata" class="form-label">Paket Wisata</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">Paket 1</option>
+                                <option value="2">Paket 2</option>
+                                <option value="3">Paket 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="tgl-pesan" class="form-label">Tanggal Pesan</label>
+                            <input type="date" class="form-control form-control-sm" id="tgl-pesan" name="tgl-pesan"
+                                placeholder="" required>
+                        </div>
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="durasi" class="form-label">Durasi</label>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-sm" id="durasi" name="durasi"
+                                    placeholder="" aria-describeby="basic-addon2" required>
+                                <span class="input-group-text" id="basic-addon2">hari</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-12 col-lg-3">
+                            <label for="jumlah-peserta" class="form-label">Jumlah Peserta</label>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-sm" id="jumlah-peserta"
+                                    name="jumlah-peserta" placeholder="" aria-describedby="basic-addon2" required>
+                                <hari class="input-group-text" id="basic-addon2">orang</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12 col-lg-9">
+                            <div>
+                                <label>Pelayanan Paket Perjalanan</label>
+                                <div class="d-lg-flex justify-content-lg-between">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Y" id="penginapan"
+                                            name="penginapan" onclick="handlePenginapanan(this)">
+                                        <label class="form-check-label" for="penginapan"> Penginapan (Rp.
+                                            1.000.000)</label>
+                                        </input>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Y" id="transportasi"
+                                            name="transportasi" onclick="handleTransportasi(this)">
+                                        <label class="form-check-label" for="transportasi"> Transportasi (Rp.
+                                            1.200.000)</label>
+                                        </input>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Y" id="makanan"
+                                            name="makanan" onclick="handleMakanan(this)">
+                                        <label class="form-check-label" for="makanan"> Makanan (Rp. 500.000)</label>
+                                        </input>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-4">
+                            <label for="harga-paket" class="form-label">Harga Paket</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="harga-paket"
+                                    name="harga-paket" placeholder="" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12 col-md-4">
+                            <label for="harga-layanan" class="form-label">Harga Layanan</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="harga-layanan"
+                                    name="harga-layanan" placeholder="" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12 col-md-4">
+                            <label for="jumlah-tagihan" class="form-label">Jumlah Tagihan</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="jumlah-tagihan"
+                                    name="jumlah-tagihan" placeholder="" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+                    <button type="button" class="btn btn-sm btn-success" onclick="hitung()">Hitung</button>
+                    <button type="reset" class="btn btn-sm btn-danger">Reset</button>
+                </form>
+            </div>
+
+
+            <div class="col-12 col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-tittle">Video 1</h5>
+                        <div class="text-center ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/xeFaACENF0s?si=xYRDDa_NDOnLu3Y9"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container mt-3">
+        <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Hubungi Sosial Media:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>Kementrian Pariwisata
+                            </h6>
+                            <p>
+                                Kementrian Pariwisata dan Ekonomi Kreatif memiliki visi menjadikan Indonesia sebagai
+                                negara
+                                tujuan
+                                pariwisata kelas dunia. Untuk itu, Kemenparekraf memiliki misi mengembangkan destinasi
+                                pariwisata kelas
+                                dunia dan melakukan pemasaran berorientasi kepada wisatawan
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Menu
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Tentang Kami</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Daftar Paket</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Beranda</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Laravel</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Wisata
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Alam</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Budaya</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Olahrahga</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Kuliner</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fa-solid fa-house"></i> PERUM CONCROONG INDAH, Rogojampi, Banyuwangi</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                jokeroktaviano05@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> +628 852 260 176</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Hak Cipta :
+                <a class="text-reset fw-bold" href="https://kemenparekraf.go.id/">Kementrian Pariwisata</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <!-- Footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/c385c7ce61.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
