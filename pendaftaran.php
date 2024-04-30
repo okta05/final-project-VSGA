@@ -59,7 +59,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Y" id="penginapan"
-                                        name="penginapan" onhcange="updateHargaLayanan">
+                                        name="penginapan" onclick="handlePenginapanan(this)">
                                     <label class="form-check-label" for="penginapan"> Penginapan (Rp.
                                         300.000)</label>
                                     </input>
@@ -67,7 +67,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Y" id="transportasi"
-                                        name="transportasi" onhcange="updateHargaLayanan">
+                                        name="transportasi" onclick="handleTransportasi(this)">
                                     <label class="form-check-label" for="transportasi"> Transportasi (Rp.
                                         200.000)</label>
                                     </input>
@@ -75,7 +75,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Y" id="makanan"
-                                        name="makanan" onhcange="updateHargaLayanan">
+                                        name="makanan" onclick="handleMakanan(this)">
                                     <label class="form-check-label" for="makanan"> Makanan (Rp. 150.000)</label>
                                     </input>
                                 </div>
