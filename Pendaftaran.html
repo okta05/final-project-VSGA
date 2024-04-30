@@ -36,14 +36,13 @@
                             <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Daftar Paket</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active" href="#">Daftar Wisata</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tentang Kami</a>
+                            <a class="nav-link" href="#">Ubah Pesanan</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tentang Kami</a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +52,7 @@
         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/image/Aleeya.jpg" class="d-block w-100 custom-slide-img " alt="...">
+                    <img src="assets/image/pm.jpg" class="d-block w-100 custom-slide-img " alt="...">
                     <div class="carousel-caption">
                         <h3>SELAMAT DATANG DI WEBSITE WISATA</h3>
                         <p>Semoga Harimu Menyenangkan</p>
@@ -63,55 +62,121 @@
         </div>
     </div>
 
-    <h1>
-        <center> INI FORM PAKET </center>
-    </h1>
-
-
     <div class="container mt-3">
         <div class="row mt-3">
             <div class="col-12 col-md-9">
-                <form class="row gy-2 gx-3 align-items-center">
-                    <div class="mb-3 col-12 col-md-6">
-                        <label class="" for="form-label">Nama Pemesan</label>
-                        <input type="text" class="form-control form-control-sm" id="autoSizingInput"
-                            placeholder="Nama Pemesan">
-                    </div>
-                    <div class="mb-3 col-12 col-md-6">
-                        <label class="" for="autoSizingSelect">Paket</label>
-                        <select class="form-select form-select-sm" id="autoSizingSelect">
-                            <option selected>Pilih Paket</option>
-                            <option value="1">Paket 1</option>
-                            <option value="2">Paket 2</option>
-                            <option value="3">Paket 3</option>
-                            <option value="3">Paket 4</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-12 col-md-6">
-                        <label class="" for="autoSizingInput">Tanggal</label>
-                        <input type="date" class="form-control form-control-sm" id="autoSizingInput" placeholder="">
-                    </div>
-                    <div class="mb-3 col-12 col-md-6">
-                        <label class="" for="autoSizingInput">Durasi</label>
-                        <div class="input-group input-group-sm">
-                            <input type="text" class="form-control" id="autoSizingInput" placeholder="Durasi">
-                            <span class="input-group-text" id="bassic-addon2">hari</span>
+                <h2>Form Pemesanan Paket Wisata</h2>
+                <form action="" method="post" autocomplate="off">
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="nama-pemesan" class="form-label">Nama Pemesan</label>
+                            <input type="text" class="form-control form-control-sm" id="nama-pemesan"
+                                name="nama-pemesan" placeholder="" required>
                         </div>
-                    </div>
-                    <div class="mb-3 col-12 col-md-6">
-                        <label class="" for="autoSizingInput">Jumlah</label>
-                        <div class="input-group input-group-sm">
-                            <input type="text" class="form-control" id="autoSizingInput" placeholder="Orang">
-                            <span class="input-group-text" id="bassic-addon2">Orang</span>
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="paket-wisata" class="form-label">Paket Wisata</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">Paket 1</option>
+                                <option value="2">Paket 2</option>
+                                <option value="3">Paket 3</option>
+                            </select>
                         </div>
                     </div>
 
-                
-                    <div class="col-md-8">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="tgl-pesan" class="form-label">Tanggal Pesan</label>
+                            <input type="date" class="form-control form-control-sm" id="tgl-pesan" name="tgl-pesan"
+                                placeholder="" required>
+                        </div>
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="durasi" class="form-label">Durasi</label>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-sm" id="durasi" name="durasi"
+                                    placeholder="" aria-describeby="basic-addon2" required>
+                                <span class="input-group-text" id="basic-addon2">hari</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-12 col-lg-3">
+                            <label for="jumlah-peserta" class="form-label">Jumlah Peserta</label>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-sm" id="jumlah-peserta"
+                                    name="jumlah-peserta" placeholder="" aria-describedby="basic-addon2" required>
+                                <hari class="input-group-text" id="basic-addon2">orang</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12 col-lg-9">
+                            <div>
+                                <label>Pelayanan Paket Perjalanan</label>
+                                <div class="d-lg-flex justify-content-lg-between">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Y" id="penginapan"
+                                            name="penginapan" onclick="handlePenginapanan(this)">
+                                        <label class="form-check-label" for="penginapan"> Penginapan (Rp.
+                                            1.000.000)</label>
+                                        </input>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Y" id="transportasi"
+                                            name="transportasi" onclick="handleTransportasi(this)">
+                                        <label class="form-check-label" for="transportasi"> Transportasi (Rp.
+                                            1.200.000)</label>
+                                        </input>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Y" id="makanan"
+                                            name="makanan" onclick="handleMakanan(this)">
+                                        <label class="form-check-label" for="makanan"> Makanan (Rp. 500.000)</label>
+                                        </input>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-4">
+                            <label for="harga-paket" class="form-label">Harga Paket</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="harga-paket"
+                                    name="harga-paket" placeholder="" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12 col-md-4">
+                            <label for="harga-layanan" class="form-label">Harga Layanan</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="harga-layanan"
+                                    name="harga-layanan" placeholder="" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12 col-md-4">
+                            <label for="jumlah-tagihan" class="form-label">Jumlah Tagihan</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="jumlah-tagihan"
+                                    name="jumlah-tagihan" placeholder="" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+                    <button type="button" class="btn btn-sm btn-success" onclick="hitung()">Hitung</button>
+                    <button type="reset" class="btn btn-sm btn-danger">Reset</button>
                 </form>
             </div>
+
 
             <div class="col-12 col-md-3">
                 <div class="card">
@@ -126,7 +191,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
