@@ -7,7 +7,7 @@
     $username = "root";
     $password = "";
     $database = "db_wisata";
-    $db = mysqli_connect($hostname, $username, $password, $database);
+    $dbConn = mysqli_connect($hostname, $username, $password, $database);
 
     $nama_pemesan = $_POST['nama-pemesan'];
     $paket_wisata = $_POST['paket-wisata'];
@@ -24,7 +24,7 @@
     $query = "INSERT INTO pesanan_wisata (nama_pemesan, paket_wisata, tgl_pesan, durasi, jumlah_peserta, penginapan, transportasi, makanan, harga_paket, harga_layanan, jumlah_tagihan)
     VALUES ('$nama_pemesan', '$paket_wisata', '$tgl_pesan', '$durasi', '$jumlah_peserta', '$penginapan', '$transportasi', '$makanan', '$harga_paket', '$harga_layanan', '$jumlah_tagihan')";
 
-    $hasil = mysqli_query($db, $query);
+    $hasil = mysqli_query($dbConn, $query);
 ?>
 
 <div class="container mt-3">
@@ -106,6 +106,7 @@
   include "layouts/footer.php";
 ?>
 
+<script src="assets/js/script.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
