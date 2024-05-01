@@ -210,30 +210,6 @@ function hitung() {
     jumlah = (biayaPaket * peserta) + ((hitungLayanan() * peserta * durasi));
     tagihan.value = jumlah;
 
-    // let namaPaket = document.getElementById("nama-paket").value;
-    // let durasi = Number(document.getElementById("durasi").value); // Mengambil nilai durasi
-    // let jumlahPeserta = Number(document.getElementById("jumlah-peserta").value); // Mengambil nilai jumlah peserta
-
-    // if (namaPaket === "Pilih Paket") {
-    //     alert("Paket Wisata harus dipilih!");
-    //     return;
-    // }
-
-    // if (isNaN(durasi) || durasi <= 0) {
-    //     alert("Durasi harus diisi dengan angka lebih dari 0!");
-    //     return;
-    // }
-
-    // if (isNaN(jumlahPeserta) || jumlahPeserta <= 0) {
-    //     alert("Jumlah Peserta harus diisi dengan angka lebih dari 0!");
-    //     return;
-    // }
-
-    // let hargaPaket = updateHargaPaket(); //mengambil nilai harga paket
-    // let biayaLayanan = hitungLayanan();
-    // let totalTagihan = hargaPaket + (biayaLayanan * durasi * jumlahPeserta);
-    // document.getElementById('jumlah-tagihan').value = totalTagihan;
-
 }
 </script>
 
