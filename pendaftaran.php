@@ -122,8 +122,8 @@
 
 
         <?php 
-  include "layouts/sidebar.php";
-?>
+        include "layouts/sidebar.php";
+        ?>
     </div>
 </div>
 
