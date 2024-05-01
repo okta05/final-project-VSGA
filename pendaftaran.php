@@ -18,7 +18,7 @@
                         <label for="paket-wisata" class="form-label">Paket Wisata</label>
                         <select class="form-select" onchange="updateHargaPaket()" id="paket-wisata" name="paket-wisata"
                             aria-label="Default select example">
-                            <option selected></option>
+                            <option selected disabled> Pilih Paket</option>
                             <option value="1">Paket 1</option>
                             <option value="2">Paket 2</option>
                             <option value="3">Paket 3</option>

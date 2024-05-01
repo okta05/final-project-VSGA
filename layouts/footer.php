@@ -61,16 +61,16 @@
                 Menu
               </h6>
               <p>
-                <a href="#!" class="text-reset">Tentang Kami</a>
+                <a href="tentangkami.php" class="text-reset">Tentang Kami</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Daftar Paket</a>
+                <a href="daftar_pesanan.php" class="text-reset">Daftar Pesanan</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Beranda</a>
+                <a href="pendaftaran.php" class="text-reset">Daftar Paket</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                <a href="index.php" class="text-reset">Beranda</a>
               </p>
             </div>
             <!-- Grid column -->
