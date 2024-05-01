@@ -42,7 +42,7 @@
               <a class="nav-link" href="daftar_pesanan.php">Daftar Pesanan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang Kami</a>
+              <a class="nav-link" href="tentangkami.php">Tentang Kami</a>
             </li>
           </ul>
         </div>

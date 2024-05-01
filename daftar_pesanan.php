@@ -30,7 +30,6 @@
                     <th scope="col">Penginapan</th>
                     <th scope="col">Transportasi</th>
                     <th scope="col">Makanan</th>
-                    <th scope="col">Harga Paket</th>
                     <th scope="col">Total Tagihan</th>
                     <th scope="col">Aksi</th>
                 </tr>
@@ -51,7 +50,6 @@
                     echo "<td>". $row['penginapan'] ."</td>";
                     echo "<td>". $row['transportasi'] ."</td>";
                     echo "<td>". $row['makanan'] ."</td>";
-                    echo "<td>". $row['harga_paket'] ."</td>";
                     echo "<td>". $row['jumlah_tagihan'] ."</td>";
                     echo  "<td>"; 
                     echo "<a href='modifikasi.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm'>Ubah</a>";
@@ -64,9 +62,6 @@
             </tbody>
 
         </table>
-
-
-
 
     </div>
 
