@@ -17,7 +17,7 @@
 
 <div class="container mt-3">
     <div class="col-12">
-        <h2>Daftar pesanan</h2>
+        <h2><center>Daftar Pesanan<center></h2>
         <table class="table table-sm table-bordered">
             <thead>
                 <tr>
@@ -31,7 +31,7 @@
                     <th scope="col">Transportasi</th>
                     <th scope="col">Makanan</th>
                     <th scope="col">Total Tagihan</th>
-                    <th scope="col">Aksi</th>
+                    <!-- <th scope="col">Aksi</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -51,10 +51,10 @@
                     echo "<td>". $row['transportasi'] ."</td>";
                     echo "<td>". $row['makanan'] ."</td>";
                     echo "<td>". $row['jumlah_tagihan'] ."</td>";
-                    echo  "<td>"; 
-                    echo "<a href='modifikasi.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm'>Ubah</a>";
-                    echo "<a href='hapus.php?id=" . $row['id'] . "' class='ms-3 btn btn-danger btn-sm' onclick='return confirm(\"Anda yakin akan hapus ?\")'>Hapus</a>";
-                 echo "</td>";
+                    // echo  "<td>"; 
+                    // echo "<a href='modifikasi.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm'>Ubah</a>";
+                    // echo "<a href='hapus.php?id=" . $row['id'] . "' class='ms-3 btn btn-danger btn-sm' onclick='return confirm(\"Anda yakin akan hapus ?\")'>Hapus</a>";
+                    // echo "</td>";
                     echo "</tr>";
                 }
               }
