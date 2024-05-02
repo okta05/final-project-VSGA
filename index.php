@@ -3,7 +3,7 @@
 ?>
 
 <h1>
-    <center> Daftar Paket </center>
+    <center> Daftar Kamar </center>
 </h1>
 
 <div class="container mt-3">
@@ -15,7 +15,7 @@
                     <div class="card">
                         <img src="assets/image/pm.jpg" class="card-img-top same-size-image">
                         <div class="card-body">
-                            <h5 class="card-tittle">Pulau Merah</h5>
+                            <h5 class="card-tittle">Standar</h5>
                             <p class="card-text">
                                 Pulau Merah merupakan tempat wisata yang berada di Dusun Pancer, Desa Sumberagung,
                                 Kecamatan Pesanggaran, Kabupaten Banyuwangi, Jawa Timur
@@ -29,7 +29,7 @@
                     <div class="card">
                         <img src="assets/image/djawatan.jpg" class="card-img-top same-size-image">
                         <div class="card-body">
-                            <h5 class="card-tittle">Djawatan</h5>
+                            <h5 class="card-tittle">Deluxe</h5>
                             <p class="card-text">
                                 Djawatan merupakan tempat wisata yang berada di Purwosari, Benculuk, Kec. Cluring,
                                 Kabupaten Banyuwangi, Jawa Timur
@@ -43,7 +43,7 @@
                     <div class="card">
                         <img src="assets/image/teluk-hijau.jpeg" class="card-img-top same-size-image">
                         <div class="card-body">
-                            <h5 class="card-tittle">Teluk Hijau</h5>
+                            <h5 class="card-tittle">Family</h5>
                             <p class="card-text">
                                 Teluk HIjau merupakan tempat wisata yang berada di Dusun Krajan, Sarongan, Kec.
                                 Pesanggaran, Kabupaten Banyuwangi, Jawa Timur

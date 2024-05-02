@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wisata</title>
+  <title>Hotel</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -36,10 +36,10 @@
               <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pendaftaran.php">Daftar Paket</a>
+              <a class="nav-link" href="pendaftaran.php">Pesan Kamar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="daftar_pesanan.php">Daftar Pesanan</a>
+              <a class="nav-link" href="daftar_pesanan.php">Daftar harga</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="tentangkami.php">Tentang Kami</a>
@@ -53,10 +53,9 @@
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/image/pm.jpg" class="d-block w-100 custom-slide-img " alt="...">
+          <img src="assets/image/jumbotron.jpg" class="d-block w-100 custom-slide-img " alt="...">
           <div class="carousel-caption">
             <h3>SELAMAT DATANG DI WEBSITE WISATA</h3>
-            <p>Semoga Harimu Menyenangkan</p>
           </div>
         </div>
       </div>
