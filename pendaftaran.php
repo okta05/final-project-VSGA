@@ -14,24 +14,53 @@
                         <input type="text" class="form-control form-control-sm" id="nama-pemesan" name="nama-pemesan"
                             placeholder="" required>
                     </div>
+
                     <div class="mb-3 col-12 col-md-6">
-                        <label for="paket-wisata" class="form-label">Paket Wisata</label>
-                        <select class="form-select" onchange="updateHargaPaket()" id="paket-wisata" name="paket-wisata"
-                            aria-label="Default select example">
-                            <option selected disabled> Pilih Paket</option>
-                            <option value="1">Paket 1</option>
-                            <option value="2">Paket 2</option>
-                            <option value="3">Paket 3</option>
-                            <option value="4">Paket 4</option>
-                        </select>
+                        <label for="no-identitas" class="form-label">No Identitas</label>
+                        <input type="number" class="form-control form-control-sm" id="no-identitas" name="no-identitas"
+                            placeholder="" required>
+                    </div>
+
+                    <div class="mb3 col-12 col-lg-5">
+                        <label for="inputJenisKelamin" class="form-label" id="jenis_kelamin">Jenis Kelamin</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="jkLaki"
+                                value="Laki-laki" required>
+                            <label class="form-check-label" for="jkLaki">Laki-laki</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="jkPerempuan"
+                                value="Perempuan" required>
+                            <label class="form-check-label" for="jkPerempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="tipe-kamar" class="form-label">Tipe Kamar</label>
+                            <select class="form-select" onchange="updateHargaKamar()" id="tipe-kamar" name="tipe-kamar"
+                                aria-label="Default select example">
+                                <option selected disabled> Pilih Tipe Kamar</option>
+                                <option value="standar">Standar</option>
+                                <option value="deluxe">Deluxe</option>
+                                <option value="family">Family</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 col-12 col-md-6">
+                            <label for="harga-kamar" class="form-label">Harga Kamar</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text" id="basic-addon2">Rp</span>
+                                <input type="text" class="form-control form-control-sm" id="harga-kamar"
+                                    name="harga-kamar" placeholder="" required>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="mb-3 col-12 col-md-6">
-                        <label for="tgl-pesan" class="form-label">Tanggal Pesan</label>
-                        <input type="date" class="form-control form-control-sm" id="tgl-pesan" name="tgl-pesan"
-                            placeholder="" required>
+                        <label for="tgl-pesan" class="form-label">Tanggal Pemesanan</label>
+                        <input type="date" class="form-control" id="tgl-pesan" name="tgl-pesan" required>
                     </div>
                     <div class="mb-3 col-12 col-md-6">
                         <label for="durasi" class="form-label">Durasi</label>
@@ -44,63 +73,30 @@
                 </div>
 
                 <div class="row">
-                    <div class="mb-3 col-12 col-lg-3">
-                        <label for="jumlah-peserta" class="form-label">Jumlah Peserta</label>
-                        <div class="input-group input-group-sm">
-                            <input type="number" class="form-control form-control-sm" id="jumlah-peserta"
-                                name="jumlah-peserta" placeholder="" aria-describedby="basic-addon2" required>
-                            <hari class="input-group-text" id="basic-addon2">orang</span>
-                        </div>
-                    </div>
-
                     <div class="mb-3 col-12 col-lg-9">
                         <div>
-                            <label>Pelayanan Paket Perjalanan</label>
+                            <label>Pelayanan Makanan</label>
                             <div class="d-lg-flex justify-content-lg-between">
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Y" id="penginapan"
-                                        name="penginapan" onclick="handlePenginapan(this)">
-                                    <label class="form-check-label" for="penginapan"> Penginapan (Rp. 300.000)</label>
+                                    <input class="form-check-input" type="checkbox" value="Y" id="breakfast"
+                                        name="breakfast" onclick="handleBreakfast(this)">
+                                    <label class="form-check-label" for="breakfast"> Breakfast</label>
                                     </input>
                                 </div>
-
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Y" id="transportasi"
-                                        name="transportasi" onclick="handleTransportasi(this)">
-                                    <label class="form-check-label" for="transportasi"> Transportasi (Rp.
-                                        1.200.000)</label>
-                                    </input>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Y" id="makanan"
-                                        name="makanan" onclick="handleMakanan(this)">
-                                    <label class="form-check-label" for="makanan"> Makanan (Rp. 500.000)</label>
-                                    </input>
-                                </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="mb-3 col-12 col-md-4">
-                        <label for="harga-paket" class="form-label">Harga Paket</label>
-                        <div class="input-group input-group-sm">
-                            <span class="input-group-text" id="basic-addon2">Rp</span>
-                            <input type="text" class="form-control form-control-sm" id="harga-paket" name="harga-paket"
-                                placeholder="" required>
-                        </div>
-                    </div>
 
+                <div class="row">
                     <div class="mb-3 col-12 col-md-4">
                         <label for="harga-layanan" class="form-label">Harga Layanan</label>
                         <div class="input-group input-group-sm">
                             <span class="input-group-text" id="basic-addon2">Rp</span>
                             <input type="text" class="form-control form-control-sm" id="harga-layanan"
-                                name="harga-layanan" placeholder="" required>
+                                name="harga-layanan" placeholder="">
                         </div>
                     </div>
 

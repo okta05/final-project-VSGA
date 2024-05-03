@@ -39,7 +39,7 @@
               <a class="nav-link" href="pendaftaran.php">Pesan Kamar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="daftar_pesanan.php">Daftar harga</a>
+              <a class="nav-link" href="daftar_harga.php">Daftar harga</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="tentangkami.php">Tentang Kami</a>
@@ -53,9 +53,9 @@
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/image/jumbotron.jpg" class="d-block w-100 custom-slide-img " alt="...">
+          <img src="assets/image/banner.jpg" class="d-block w-100 custom-slide-img " alt="...">
           <div class="carousel-caption">
-            <h3>SELAMAT DATANG DI WEBSITE WISATA</h3>
+            <h1>SELAMAT DATANG DI HOTEL</h1>
           </div>
         </div>
       </div>

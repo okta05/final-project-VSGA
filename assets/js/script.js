@@ -2,58 +2,43 @@ penginapan = false;
 transportasi = false;
 makanan = false;
 
-function updateHargaPaket() {
-    nilai = Number(document.getElementById("paket-wisata").value); //.value digunakan untuk mengambil nilai
-    elemenHargaPaket = (document.getElementById("harga-paket"));
-    harga = 0;
+function updateHargaKamar() {
+    nilai = document.getElementById("tipe-kamar").value; //.value digunakan untuk mengambil nilai
+    elemenHargaKamar = (document.getElementById("harga-kamar"));
 
-    if (nilai == 1) {
-        harga = 500000;
-    } else if (nilai == 2) {
-        harga = 750000;
-    } else if (nilai == 3) {
+    harga = nilai;
+
+    if (nilai == 'standar') {
+        harga = 600000;
+    } else if (nilai == 'deluxe') {
+        harga = 800000;
+    } else if (nilai == 'family') {
         harga = 1000000;
-    } else if (nilai == 4) {
-        harga = 1250000;
     }
     // console.log(nilai);
     //  alert(harga);
-    elemenHargaPaket.value = harga;
-    return harga;
+    elemenHargaKamar.value = harga;
+    // return harga;
 }
 
-function handlePenginapan(cb) {
-    penginapan = cb.checked;
+function handleBreakfast(cb) {
+    breakfast = cb.checked;
     //alert("handle inap");
     hl = document.getElementById("harga-layanan");
-    hl.value = hitungLayanan();
-}
+    if (breakfast) {
+       hl.value = hitungLayanan();
+    } else {
+        hl.value = 0;
+    }
 
-function handleTransportasi(cb) {
-    transportasi = cb.checked;
-    //alert("handle trans")
-    hl = document.getElementById("harga-layanan");
-    hl.value = hitungLayanan();
-}
-
-function handleMakanan(cb) {
-    makanan = cb.checked;
-    hl = document.getElementById("harga-layanan");
-    hl.value = hitungLayanan();
 }
 
 
 function hitungLayanan() {
     totalLayanan = 0;
 
-    if (penginapan) {
-        totalLayanan = totalLayanan + 300000;
-    }
-    if (transportasi) {
-        totalLayanan = totalLayanan + 200000;
-    }
-    if (makanan) {
-        totalLayanan = totalLayanan + 150000;
+    if (breakfast) {
+        totalLayanan = totalLayanan + 80000;
     }
 
     //alert(totalLayanan);
@@ -62,11 +47,31 @@ function hitungLayanan() {
 
 function hitung() {
     jumlah = 0;
-    peserta = Number(document.getElementById("jumlah-peserta").value);
+    total = 0;
     tagihan = document.getElementById("jumlah-tagihan");
     durasi = Number(document.getElementById("durasi").value);
-    biayaPaket = Number(document.getElementById("harga-paket").value);
-    jumlah = (biayaPaket * peserta) + ((hitungLayanan() * peserta * durasi));
-    tagihan.value = jumlah;
+    biayaKamar = Number(document.getElementById("harga-kamar").value);
+    totalLayanan = Number(document.getElementById("harga-layanan").value);
+    jumlah = biayaKamar * durasi;
 
+    if (durasi >= 3) {
+        jumlah = jumlah * 0.9;
+    }
+
+    total = (jumlah) + (totalLayanan * durasi);
+
+    tagihan.value = total;
 }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var noIdentitasInput = document.getElementById("no-identitas");
+        noIdentitasInput.addEventListener("change", function () {
+            var identitasValue = this.value.trim();
+            if (identitasValue.length < 16) {
+                alert("Nomor identitas harus memiliki minimal 16 karakter.");
+                // Kosongkan nilai input
+                this.value = "";
+            }
+        });
+    });
+    

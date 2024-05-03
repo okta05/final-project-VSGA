@@ -6,24 +6,23 @@
     $hostname = "localhost";
     $username = "root";
     $password = "";
-    $database = "db_wisata";
+    $database = "db_hotel";
     $dbConn = mysqli_connect($hostname, $username, $password, $database);
 
     $nama_pemesan = $_POST['nama-pemesan'];
-    $paket_wisata = $_POST['paket-wisata'];
+    $no_identitas = $_POST['no-identitas'];
+    $tipe_kamar = $_POST['tipe-kamar'];
+    $jenis_kelamin = $_POST["jenis_kelamin"];
     $tgl_pesan = $_POST['tgl-pesan'];
     $durasi = $_POST['durasi'];
-    $jumlah_peserta = $_POST['jumlah-peserta'];
-    $penginapan = isset($_POST['penginapan']) ? 'Y' : 'N';
-    $transportasi = isset($_POST['transportasi']) ? 'Y' : 'N';
-    $makanan = isset($_POST['makanan']) ? 'Y' : 'N';
+    $breakfast = isset($_POST['breakfast']) ? 'Y' : 'N';
     $harga_layanan = $_POST['harga-layanan'];
-    $harga_paket = $_POST['harga-paket'];
+    $harga_kamar = $_POST['harga-kamar'];
     $jumlah_tagihan = $_POST['jumlah-tagihan'];
 
-    $query = "INSERT INTO pesanan_wisata (nama_pemesan, paket_wisata, tgl_pesan, durasi, jumlah_peserta, penginapan, transportasi, makanan, harga_paket, harga_layanan, jumlah_tagihan)
-    VALUES ('$nama_pemesan', '$paket_wisata', '$tgl_pesan', '$durasi', '$jumlah_peserta', '$penginapan', '$transportasi', '$makanan', '$harga_paket', '$harga_layanan', '$jumlah_tagihan')";
-
+    $query = "INSERT INTO pesanan_hotel (nama_pemesan, no_identitas, tipe_kamar, jenis_kelamin, tgl_pesan, durasi, breakfast, harga_layanan, harga_kamar, jumlah_tagihan)
+    VALUES ('$nama_pemesan', '$no_identitas', '$tipe_kamar', '$jenis_kelamin', '$tgl_pesan', '$durasi', '$breakfast', '$harga_layanan', '$harga_kamar', '$jumlah_tagihan')";
+    
     $hasil = mysqli_query($dbConn, $query);
 ?>
 
@@ -41,41 +40,41 @@
                 <div class="card-body">
                     <table style="width: 50%">
                         <tr>
-                            <td>nama</td>
+                            <td>Nama Pemesan : </td>
                             <td><?php echo $nama_pemesan; ?></td>
                         </tr>
                         <tr>
-                            <td>Jumlah Peserta</td>
-                            <td><?php echo $jumlah_peserta; ?></td>
+                            <td>No Identitas : </td>
+                            <td><?php echo $no_identitas; ?></td>
                         </tr>
                         <tr>
-                            <td>Waktu Perjalanan : </td>
-                            <td><?php echo $durasi; ?></td>
+                            <td>Jenis Kelamin : </td>
+                            <td><?php echo $jenis_kelamin; ?></td>
                         </tr>
                         <tr>
-                            <td>Layanan Paket</td>
+                            <td>Tipe Kamar : </td>
+                            <td><?php echo $tipe_kamar; ?></td>
+                        </tr>
+                        <tr>
+                            <td>durasi : </td>
+                            <td><?php echo $durasi; ?> hari</td>
+                        </tr>
+                        <tr>
+                            <td>Layanan Makanan : </td>
                             <?php
                                 $harga_layanan="";
 
-                                if($penginapan=="Y"){
-                                    $harga_layanan=$harga_layanan."Penginapan ";
-                                }
-                                if($transportasi=="Y"){
-                                    $harga_layanan=$harga_layanan."Transportasi ";
-                                }
-                                if($makanan=="Y"){
-                                    $harga_layanan=$harga_layanan."Makanan ";
+                                if($breakfast=="Y"){
+                                    $harga_layanan=$harga_layanan."breakfast ";
+                                } else {
+                                    $harga_layanan=$harga_layanan."tidak memesan layanan makanan ";
                                 }
 
                             ?>
                             <td><?php echo $harga_layanan ?></td>
                         </tr>
                         <tr>
-                            <td>Harga Paket</td>
-                            <td><?php echo $harga_paket; ?></td>
-                        </tr>
-                        <tr>
-                            <td>Jumlah Tagihan</td>
+                            <td>Jumlah Tagihan : </td>
                             <td><?php echo $jumlah_tagihan; ?></td>
                         </tr>
                     </table>
@@ -89,6 +88,7 @@
         ?>
     </div>
 </div>
+
 <div class="container mt-3">
     <div class="card" style="text-align: center">
         <div class="card-body">
@@ -101,6 +101,7 @@
         </div>
     </div>
 </div>
+
 
 <?php 
   include "layouts/footer.php";

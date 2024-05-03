@@ -13,12 +13,11 @@
 
                 <div class="col">
                     <div class="card">
-                        <img src="assets/image/pm.jpg" class="card-img-top same-size-image">
+                        <img src="assets/image/standar.jpeg" class="card-img-top same-size-image">
                         <div class="card-body">
                             <h5 class="card-tittle">Standar</h5>
                             <p class="card-text">
-                                Pulau Merah merupakan tempat wisata yang berada di Dusun Pancer, Desa Sumberagung,
-                                Kecamatan Pesanggaran, Kabupaten Banyuwangi, Jawa Timur
+                                kamar ini merupakan kamar standar
                             </p>
                             <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
                         </div>
@@ -27,12 +26,11 @@
 
                 <div class="col">
                     <div class="card">
-                        <img src="assets/image/djawatan.jpg" class="card-img-top same-size-image">
+                        <img src="assets/image/deluxe.jpg" class="card-img-top same-size-image">
                         <div class="card-body">
                             <h5 class="card-tittle">Deluxe</h5>
                             <p class="card-text">
-                                Djawatan merupakan tempat wisata yang berada di Purwosari, Benculuk, Kec. Cluring,
-                                Kabupaten Banyuwangi, Jawa Timur
+                                kamar ini merupakan kamar deluxe
                             </p>
                             <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
                         </div>
@@ -41,31 +39,17 @@
 
                 <div class="col">
                     <div class="card">
-                        <img src="assets/image/teluk-hijau.jpeg" class="card-img-top same-size-image">
+                        <img src="assets/image/family.jpeg" class="card-img-top same-size-image">
                         <div class="card-body">
                             <h5 class="card-tittle">Family</h5>
                             <p class="card-text">
-                                Teluk HIjau merupakan tempat wisata yang berada di Dusun Krajan, Sarongan, Kec.
-                                Pesanggaran, Kabupaten Banyuwangi, Jawa Timur
+                                Kamar ini merupakan kamar family
                             </p>
                             <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="card">
-                        <img src="assets/image/telunjuk-raung.jpg" class="card-img-top same-size-image">
-                        <div class="card-body">
-                            <h5 class="card-tittle">Telunjuk Raung</h5>
-                            <p class="card-text">
-                                Telunjuk Raung merupakan tempat wisata yang berada di Desa Sumberarum, Dusun Mangaran,
-                                Songgon, Kabupaten Banyuwangi, Jawa Timur.
-                            </p>
-                            <a href="pendaftaran.php" class="btn btn-danger">daftar</a>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>

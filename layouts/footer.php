@@ -40,19 +40,6 @@
         <div class="container text-center text-md-start mt-5">
           <!-- Grid row -->
           <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>Kementrian Pariwisata
-              </h6>
-              <p>
-                Kementrian Pariwisata dan Ekonomi Kreatif memiliki visi menjadikan Indonesia sebagai negara tujuan
-                pariwisata kelas dunia. Untuk itu, Kemenparekraf memiliki misi mengembangkan destinasi pariwisata kelas
-                dunia dan melakukan pemasaran berorientasi kepada wisatawan
-              </p>
-            </div>
-            <!-- Grid column -->
 
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -61,16 +48,16 @@
                 Menu
               </h6>
               <p>
-                <a href="tentangkami.php" class="text-reset">Tentang Kami</a>
-              </p>
-              <p>
-                <a href="daftar_pesanan.php" class="text-reset">Daftar Pesanan</a>
-              </p>
-              <p>
-                <a href="pendaftaran.php" class="text-reset">Daftar Paket</a>
-              </p>
-              <p>
                 <a href="index.php" class="text-reset">Beranda</a>
+              </p>
+              <p>
+                <a href="pendaftaran.php" class="text-reset">Pesan Kamar</a>
+              </p>
+              <p>
+                <a href="daftar_harga.php" class="text-reset">Daftar Harga</a>
+              </p>
+              <p>
+                <a href="tentangkami.php" class="text-reset">Tentang Kami</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -79,19 +66,16 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Wisata
+                Kamar
               </h6>
               <p>
-                <a href="#!" class="text-reset">Alam</a>
+                <a href="#!" class="text-reset">Standart</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Budaya</a>
+                <a href="#!" class="text-reset">Deluxe</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Olahrahga</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Kuliner</a>
+                <a href="#!" class="text-reset">Family</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -100,7 +84,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p><i class="fa-solid fa-house"></i> PERUM CONCROONG INDAH, Rogojampi, Banyuwangi</p>
+              <p><i class="fa-solid fa-house"></i> Jalan Brawijaya, Mojopanggung, Giri, 68425 Banyuwangi, Indonesia</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
                 jokeroktaviano05@gmail.com
@@ -117,7 +101,7 @@
       <!-- Copyright -->
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2021 Hak Cipta :
-        <a class="text-reset fw-bold" href="https://kemenparekraf.go.id/">Kementrian Pariwisata</a>
+        <a class="text-reset fw-bold" href="https://www.booking.com/hotel/id/aston-banyuwangi-city.id.html">Hotel Aston</a>
       </div>
       <!-- Copyright -->
     </footer>
