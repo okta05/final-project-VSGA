@@ -15,7 +15,7 @@
                     <div class="card">
                         <img src="assets/image/standar.jpeg" class="card-img-top same-size-image">
                         <div class="card-body">
-                            <h5 class="card-tittle">Standar</h5>
+                            <h5 class="card-tittle">Standart</h5>
                             <p class="card-text">
                                 kamar ini merupakan kamar standar
                             </p>

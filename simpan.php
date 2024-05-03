@@ -20,6 +20,13 @@
     $harga_kamar = $_POST['harga-kamar'];
     $jumlah_tagihan = $_POST['jumlah-tagihan'];
 
+
+
+    if ($durasi >= 3) {
+        $diskon='';
+
+    }
+
     $query = "INSERT INTO pesanan_hotel (nama_pemesan, no_identitas, tipe_kamar, jenis_kelamin, tgl_pesan, durasi, breakfast, harga_layanan, harga_kamar, jumlah_tagihan)
     VALUES ('$nama_pemesan', '$no_identitas', '$tipe_kamar', '$jenis_kelamin', '$tgl_pesan', '$durasi', '$breakfast', '$harga_layanan', '$harga_kamar', '$jumlah_tagihan')";
     
@@ -72,6 +79,10 @@
 
                             ?>
                             <td><?php echo $harga_layanan ?></td>
+                        </tr>
+                        <tr>
+                            <td>Diskon : </td>
+                            <td><?php echo isset($diskon) ? 'Diskon 10%' . $diskon : 'Tidak ada diskon'; ?></td>
                         </tr>
                         <tr>
                             <td>Jumlah Tagihan : </td>

@@ -15,10 +15,9 @@ function updateHargaKamar() {
     } else if (nilai == 'family') {
         harga = 1000000;
     }
-    // console.log(nilai);
-    //  alert(harga);
+
     elemenHargaKamar.value = harga;
-    // return harga;
+
 }
 
 function handleBreakfast(cb) {
@@ -54,13 +53,15 @@ function hitung() {
     totalLayanan = Number(document.getElementById("harga-layanan").value);
     jumlah = biayaKamar * durasi;
 
-    if (durasi >= 3) {
-        jumlah = jumlah * 0.9;
+
+    if (durasi > 3) {
+            diskon = jumlah * 0.1;
+        jumlah -= diskon;
     }
 
-    total = (jumlah) + (totalLayanan * durasi);
-
+    total = jumlah + (totalLayanan * durasi);
     tagihan.value = total;
+    
 }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -74,4 +75,3 @@ function hitung() {
             }
         });
     });
-    

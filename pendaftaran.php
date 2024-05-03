@@ -6,7 +6,7 @@
 <div class="container mt-3">
     <div class="row mt-3">
         <div class="col-12 col-md-9">
-            <h2>Form Pemesanan Paket Wisata</h2>
+            <h2>Form Pemesanan Paket Hotel</h2>
             <form action="simpan.php" method="post" autocomplate="off">
                 <div class="row">
                     <div class="mb-3 col-12 col-md-6">
